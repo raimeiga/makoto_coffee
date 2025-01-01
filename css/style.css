@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/*共通項目*/
+body {
+ margin: 0;
+ font-family: "ヒラギノ角ゴ ProN W2", "Hiragino Sans", sans-serif;
+ font-weight: 400;
+ font-style: normal;
+ font-size: 10px;
+}
+
+p, h1, h2, h3, h4, a {
+ margin: 0;
+ color: #505050;
+ font-weight: 200;
+}
+
+/*==================
+  mixin
+==================*/
+@mixin pc {
+ @media only screen and (min-width: 768px) { //768pxは変数を使用しても良い
+   @content;
+ }
+}
+
+@mixin sp {
+ @media only screen and (max-width: 767px) { //767pxは変数を使用しても良い
+   @content;
+ }
+}
+
+@mixin min($width) {
+ @media only screen and (min-width: #{$width}) {
+   @content;
+ }
+}
+
+@mixin max($width) {
+ @media only screen and (max-width: #{$width}) {
+   @content;
+ }
+}
+
+/* ------------
+header
+-------------- */
+
+.inner {
+ max-width: 94rem;
+ width: 100%;
+ padding-inline: 3rem;
+}
+
+header {
+ width: 100%;
+ background-color: #fff; 
+}
+
+.header-container {
+ display: flex;
+ justify-content: space-between;
+}
+
+.header-logo {
+ background-color: yellow;
+ 
+
+}
+
+.header-navi {
+ background-color: yellow;
+}
+
+.header-navi ul {
+ display: flex; 
+}
+
+.header-navi ul li {
+ list-style-type: none;
+}
+
+
+
+
