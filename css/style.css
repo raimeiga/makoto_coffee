@@ -6,12 +6,17 @@ html {
   font-weight: 400;
   font-style: normal;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 p, h1, h2, h3, h4, a {
   margin: 0;
   color: #505050;
   font-weight: 200;
+}
+
+picture {
+  width: 100%;
 }
 
 /*==================
@@ -55,21 +60,21 @@ header {
           align-items: center;
 }
 
-.header-navi {
+.header-nav {
   background-color: yellow;
   height: inherit;
   font-size: 2rem;
   line-height: 1;
 }
 
-.header-navi ul {
+.header-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: inherit;
 }
 
-.header-navi ul li {
+.header-nav ul li {
   list-style-type: none;
   height: inherit;
   display: -webkit-box;
@@ -79,8 +84,4 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding-inline: 1.7rem;
-}
-
-.main-box {
-  width: 100%;
 }/*# sourceMappingURL=style.css.map */

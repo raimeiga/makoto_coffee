@@ -7,6 +7,7 @@ html {
  font-weight: 400;
  font-style: normal;
  font-size: 10px;
+ scroll-behavior: smooth;
 }
 
 p, h1, h2, h3, h4, a {
@@ -77,20 +78,19 @@ header {
  align-items: center;
 }
 
-.header-navi {
+.header-nav {
  background-color: yellow;
  height: inherit;
  font-size: 2rem;
  line-height: 1;
 }
 
-.header-navi ul {
+.header-nav ul {
  display: flex; 
- height: inherit;
- 
+ height: inherit; 
 }
 
-.header-navi ul li {
+.header-nav ul li {
  list-style-type: none;
  height: inherit;
  display: flex;
@@ -98,12 +98,7 @@ header {
  padding-inline: 1.7rem;
 }
 
-.main-box {
- width: 100%;
-}
 
-.fv-container {
- width: 100%;
-}
+
 
 
