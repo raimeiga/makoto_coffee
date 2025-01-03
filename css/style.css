@@ -40,7 +40,7 @@ header {
 }
 
 .header__container {
-  height: 8rem;
+  height: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,7 +60,8 @@ header {
 
 .header__logo h1 {
   font-family: "Mountains of Christmas", serif;
-  font-size: 4rem;
+  font-size: 8rem;
+  font-weight: 600;
   line-height: 1;
 }
 
@@ -77,19 +78,13 @@ header {
   height: inherit;
 }
 
-.header__nav ul a {
-  height: inherit;
-  background-color: yellow;
-  -webkit-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-
-.header__nav ul a:hover {
-  opacity: 0.5;
-}
-
 .header__nav ul li {
   list-style-type: none;
+  height: inherit;
+  padding-inline: 1.7rem;
+}
+
+.header__nav ul li a {
   height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,7 +92,43 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-inline: 1.7rem;
+  position: relative;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.header__nav ul li a span {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__nav ul li a span:before {
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    background: #505050;
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: -webkit-transform 0.8s;
+    transition: transform 0.8s;
+    transition: transform 0.8s, -webkit-transform 0.8s;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+}
+
+.header__nav ul li a:hover {
+  opacity: 0.5;
+}
+
+.header__nav ul li a:hover span::before {
+  width: 100%; /* hover時にpタグの幅いっぱいに下線が広がる */
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1); /* hover時に::beforeのtransformを変更 */
 }
 
 /*==================

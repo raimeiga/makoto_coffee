@@ -67,7 +67,7 @@ header {
 }
 
 .header__container {
- height: 8rem;
+ height: 12rem;
  display: flex;
  justify-content: space-between;
 }
@@ -79,7 +79,8 @@ header {
 
 .header__logo h1 { 
  font-family: "Mountains of Christmas", serif;
- font-size: 4rem;
+ font-size: 8rem;
+ font-weight: 600;
  line-height: 1;
 }
 
@@ -95,26 +96,52 @@ header {
  height: inherit; 
 }
 
-.header__nav ul a {
- height: inherit; 
- background-color: yellow;
- transition: opacity .4s;
-}
-
-.header__nav ul a:hover {
- opacity: 0.5;
-
-}
-
-
-
 .header__nav ul li {
+ // background-color: aqua;
  list-style-type: none;
- height: inherit;
- display: flex;
- align-items: center;
+ height: inherit; 
  padding-inline: 1.7rem;
 }
+
+.header__nav ul li a {
+ height: inherit; 
+ // background-color: yellow; 
+ display: flex;
+ align-items: center;
+ position: relative;
+ transition: opacity .4s; 
+}
+
+.header__nav ul li a span {
+ position: relative;
+}
+
+.header__nav ul li a span:before {
+ @include pc { //spのナビメニューにも下線が走ってしまうのでpcに限定する
+   content: '';
+   width: 0;
+   height: 0.2rem;
+   background: #505050;
+   position: absolute;
+   left: 0;
+   bottom: -0.2rem;
+   transform: scaleX(0);
+   transition: transform .8s;
+   transform-origin: center; 
+   // ↑ leftは横の変形起点（左から右に動く）
+   //   centerは縦の変形起点（だけど今回はなくても動く）
+ }
+}
+
+.header__nav ul li a:hover {
+ opacity: 0.5;
+}
+
+.header__nav ul li a:hover span::before {
+ width: 100%; /* hover時にpタグの幅いっぱいに下線が広がる */
+ transform: scaleX(1); /* hover時に::beforeのtransformを変更 */
+}
+
 
 /*==================
  main
