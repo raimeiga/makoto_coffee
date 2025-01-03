@@ -35,9 +35,11 @@ header
 header {
   width: 100%;
   background-color: #fff;
+  font-family: "Mountains of Christmas", serif;
+  line-height: 1;
 }
 
-.header-container {
+.header__container {
   height: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,7 +49,7 @@ header {
           justify-content: space-between;
 }
 
-.header-logo {
+.header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,26 +58,37 @@ header {
           align-items: center;
 }
 
-.header-logo h1 {
+.header__logo h1 {
   font-family: "Mountains of Christmas", serif;
   font-size: 4rem;
   line-height: 1;
 }
 
-.header-nav {
+.header__nav {
   height: inherit;
-  font-size: 2rem;
+  font-size: 4rem;
   line-height: 1;
 }
 
-.header-nav ul {
+.header__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: inherit;
 }
 
-.header-nav ul li {
+.header__nav ul a {
+  height: inherit;
+  background-color: yellow;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.header__nav ul a:hover {
+  opacity: 0.5;
+}
+
+.header__nav ul li {
   list-style-type: none;
   height: inherit;
   display: -webkit-box;
@@ -94,11 +107,75 @@ header {
   width: 100%;
 }
 
-.main-box {
-  background-color: yellow;
+.main__box {
   width: 100%;
 }
 
-.main-box img {
+.main__box img {
   width: 100%;
+}
+
+/*==================
+ menu
+==================*/
+.menu {
+  padding-block: 5rem;
+}
+
+.inner > h2 {
+  font-family: "Mountains of Christmas", serif;
+  font-size: 4rem;
+  line-height: 1;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.inner > h2::after {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 2.5px;
+  background: #505050;
+  margin: 4px auto 0;
+}
+
+.menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem;
+}
+
+.menu-list__img {
+  width: 40rem;
+}
+
+.menu-list__img img {
+  width: 100%;
+}
+
+.menu-list__text {
+  padding: 2rem;
+}
+
+.menu-list__title {
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.menu-list__memo {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/*==================
+ about
+==================*/
+.about {
+  padding-block: 5rem;
 }/*# sourceMappingURL=style.css.map */

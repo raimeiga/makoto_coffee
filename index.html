@@ -21,14 +21,18 @@
 <body>
   <header>
     <div class="inner">
-      <div class="header-container">
-        <div class="header-logo">
+      <div class="header__container">
+        <div class="header__logo">
           <h1>makoto coffee</h1>
         </div>
-        <div class="header-nav">
+        <div class="header__nav">
           <ul>
-            <li><a href="">menu</a></li>
-            <li><about href="">about</a></li>
+            <a href="#menu">
+               <li>menu</li>
+            </a>
+            <a href="#about">
+              <li>about</li>
+            </a>
           </ul>
         </div>
       </div>
@@ -36,7 +40,7 @@
   </header>
 
   <section class="main">
-    <div class="main-box">
+    <div class="main__box">
       <picture>
         <source media="(max-width: 767px)" srcset="./images/fv_sp.jpg">
         <img src="./images/fv.jpg" alt="">
@@ -44,8 +48,34 @@
     </div>
   </section>
 
-  <section>
+  <section  id="menu" class="menu">
+   <div class="inner">
+     <h2>menu</h2>
+   
+     <div class="menu__lists">
+       <div class="menu__list menu-list">
+        <div class="menu-list__img">
+           <picture>
+             <source media="(max-width: 767px)" srcset="./images/menu01_sp.jpg">
+             <img src="./images/menu01.jpg" alt="">
+           </picture>
+         </div>
+         <div class="menu-list__text">
+           <h3 class="menu-list__title">渋谷モヤイ珈琲</h3>
+           <p class="menu-list__memo">商品説明が入ります。商品説明が入ります。<br>
+            商品説明が入ります。商品説明が入ります。<br>
+           </p>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
+  </section>
 
+  <section id="about" class="about">
+   <div class="inner">
+     <h2>about</h2>
+   </div>
   </section>
   <footer>
 
