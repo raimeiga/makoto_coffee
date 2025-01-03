@@ -40,7 +40,7 @@ header {
 }
 
 .header__container {
-  height: 12rem;
+  height: 26rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,7 +60,7 @@ header {
 
 .header__logo h1 {
   font-family: "Mountains of Christmas", serif;
-  font-size: 8rem;
+  font-size: 12rem;
   font-weight: 600;
   line-height: 1;
 }
@@ -69,13 +69,23 @@ header {
   height: inherit;
   font-size: 4rem;
   line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2rem;
 }
 
 .header__nav ul li {
@@ -138,8 +148,15 @@ header {
   width: 100%;
 }
 
-.main__box {
-  width: 100%;
+.main__fv {
+  width: 50%;
+  height: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main__box img {
