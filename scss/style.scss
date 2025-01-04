@@ -77,6 +77,11 @@ header {
  align-items: center; 
 }
 
+.header__logo h1 span {
+font-size: 4rem;
+line-height: 1;
+}
+
 .header__logo h1 { 
  font-family: "Mountains of Christmas", serif;
  font-size: 12rem;

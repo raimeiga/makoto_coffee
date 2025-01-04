@@ -58,6 +58,11 @@ header {
           align-items: center;
 }
 
+.header__logo h1 span {
+  font-size: 4rem;
+  line-height: 1;
+}
+
 .header__logo h1 {
   font-family: "Mountains of Christmas", serif;
   font-size: 12rem;
@@ -148,15 +153,19 @@ header {
   width: 100%;
 }
 
-.main__fv {
-  width: 50%;
-  height: 50rem;
+.main__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.main__fv {
+  width: 45rem;
+  height: 50rem;
+  margin-left: 5rem;
 }
 
 .main__box img {
